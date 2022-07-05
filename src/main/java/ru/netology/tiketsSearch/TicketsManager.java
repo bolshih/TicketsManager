@@ -1,12 +1,14 @@
 package ru.netology.tiketsSearch;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 
 public class TicketsManager {
 
     private TicketsRepository repo;
 
+    TicketByTimeAscComparator comparator = new TicketByTimeAscComparator();
     public TicketsManager(TicketsRepository repo) {
         this.repo = repo;
     }
@@ -35,9 +37,7 @@ public class TicketsManager {
                 count++;
             }
         }
-        Arrays.sort(result);
+        Arrays.sort(result, comparator);
         return result;
     }
-
-
 }

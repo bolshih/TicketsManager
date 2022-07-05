@@ -14,7 +14,7 @@ public class TicketsManagerTests {
     Tickets ticket3 = new Tickets(3, 900, "SFX", "YBO", 600);
     Tickets ticket4 = new Tickets(4, 200, "MOW", "AGK", 360);
     Tickets ticket5 = new Tickets(5, 345, "KAF", "MOW", 435);
-    Tickets ticket6 = new Tickets(6, 500, "MOW", "AGK", 345);
+    Tickets ticket6 = new Tickets(6, 500, "MOW", "AGK", 320);
     Tickets ticket7 = new Tickets(7, 435, "PAB", "UAL", 365);
     Tickets ticket8 = new Tickets(8, 2234, "YAG", "PAB", 900);
 
@@ -44,7 +44,7 @@ public class TicketsManagerTests {
 
     public void shouldFindBy() {
 
-        Tickets[] expected = {ticket4, ticket2, ticket6};
+        Tickets[] expected = {ticket6, ticket2, ticket4};
         Tickets[] actual = manager.searchBy("MOW", "AGK");
 
         Assertions.assertArrayEquals(expected, actual);
