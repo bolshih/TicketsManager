@@ -47,9 +47,9 @@ public class Tickets implements Comparable<Tickets> {
         }
     }
 
-    public boolean matches(Tickets ticket, String dAirport, String aAirport) {
-        if (departureAirport.contains(dAirport)) {
-            if (arrivalAirport.contains(aAirport)) {
+    public boolean matches(Tickets ticket, String from, String to) {
+        if (departureAirport.contains(from)) {
+            if (arrivalAirport.contains(to)) {
                 return true;
             } else {
                 return false;

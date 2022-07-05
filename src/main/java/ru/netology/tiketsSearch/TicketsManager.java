@@ -19,11 +19,11 @@ public class TicketsManager {
         return repo.getTickets();
     }
 
-    public Tickets[] searchBy(String dAirport, String aAirport) {
+    public Tickets[] searchBy(String from, String to) {
         Tickets[] result = new Tickets[0];
         int count = 0;
         for (Tickets ticket : repo.getTickets()) {
-            if (ticket.matches(ticket, dAirport, aAirport)) {
+            if (ticket.matches(ticket, from, to)) {
                 Tickets[] tmp = new Tickets[result.length + 1];
                 if (count > 0) {
                     for (int i = 0; i < result.length; i++) {
